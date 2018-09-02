@@ -15,6 +15,25 @@ ServletContainerInitializer；
 @HandlesTypes；
 
 
+测试请求：
+1.http://localhost:8080/servlet3.0/(index.jsp)
+2.http://localhost:8080/servlet3.0/user
+
+
+
+===========================================================================
+servlet 3.1 中文规范
+8.2.4 共享库 / 运行时可插拔性
+除了支持fragment和使用注解的外，要求之一是我们不仅能plug-in 绑定在WEB-INF/lib下的，也能plugin
+框架共享副本—包括能plug-in到容器的如建议在web容器之上的JAX-WS、JAX-RS和JSF。
+ServletContainerInitializer允许处理这样的使用情况下，如下所述。
+ServletContainerInitializer类通过jar services API查找。
+对于每一个应用，应用启动时，由容器创建一个ServletContainerInitializer实例。
+框架提供的ServletContainerInitializer实现必须绑定在jar包的META-INF/services目录中的一个叫做
+javax.servlet.ServletContainerInitializer的文件，
+根据jar services API，指定ServletContainerInitializer的实现。
+
+
 
 
 
